@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Class-Path: aopalliance-1.0.jar asm-3.3.1.jar asm-analysis-3.3.1.jar a
+ sm-tree-3.3.1.jar asm-util-3.3.1.jar commons-logging-1.1.1.jar cxf-ap
+ i-2.5.2.jar cxf-common-utilities-2.5.2.jar cxf-rt-bindings-xml-2.5.2.
+ jar cxf-rt-core-2.5.2.jar cxf-rt-frontend-jaxrs-2.5.2.jar cxf-rt-tran
+ sports-common-2.5.2.jar cxf-rt-transports-http-2.5.2.jar geronimo-jav
+ amail_1.4_spec-1.7.1.jar guava-11.0.1.jar jackson-core-asl-1.8.6.jar 
+ jackson-jaxrs-1.8.6.jar jackson-mapper-asl-1.8.6.jar jaxb-impl-2.1.13
+ .jar jettison-1.3.1.jar jsr305-1.3.9.jar jsr311-api-1.1.1.jar neethi-
+ 3.0.1.jar parboiled-core-1.0.2.jar parboiled-java-1.0.2.jar spring-ao
+ p-3.0.6.RELEASE.jar spring-asm-3.0.6.RELEASE.jar spring-beans-3.0.6.R
+ ELEASE.jar spring-context-3.0.6.RELEASE.jar spring-core-3.0.6.RELEASE
+ .jar spring-expression-3.0.6.RELEASE.jar spring-web-3.0.6.RELEASE.jar
+  stax2-api-3.1.1.jar woodstox-core-asl-4.1.1.jar wsdl4j-1.6.2.jar xml
+ schema-core-2.0.1.jar
+
