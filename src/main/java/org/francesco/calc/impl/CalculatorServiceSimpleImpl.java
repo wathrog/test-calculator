@@ -2,7 +2,10 @@ package org.francesco.calc.impl;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 import org.francesco.calc.api.CalculatorService;
@@ -14,20 +17,27 @@ public class CalculatorServiceSimpleImpl implements CalculatorService {
 	
 	private ParsingCalculator calc;
 	
-	public CalculatorServiceSimpleImpl(ParsingCalculator calc) {
+	public CalculatorServiceSimpleImpl() {
+	}
+	
+	public void setCalc(ParsingCalculator calc) {
 		checkNotNull(calc);
 		this.calc = calc;
 	}
 
 	@Override
-	public Response calculate(String formula) {
-		checkNotNull(formula);
+	@GET
+	@Path("/calculate")
+    @Produces("text/plain")
+	public Response calculate(@QueryParam("formula") String formula) {
+		checkNotNull(calc, "Calculator implementation has not been injected");
+		checkNotNull(formula, "Formula is not passed correctly");
 		Response r;
 		try {
 			Integer res = calc.calculate(formula);
 			r = Response.ok(res).build();
 		} catch (ParsingException e) {
-			r = Response.status(400).entity("Error during parsing the formula").build();
+			r = Response.status(400).entity("Error during parsing the formula: "  + e.getLocalizedMessage()).build();
 		}
 		return r;
 	}
