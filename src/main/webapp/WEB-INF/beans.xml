@@ -21,14 +21,10 @@ http://cxf.apache.org/schemas/jaxrs.xsd">
 
    <jaxrs:server id="services" address="/">
     <jaxrs:serviceBeans>
-      <bean class="org.francesco.calc.HelloWorld" />
       <bean id="calculatorServiceImpl" class="org.francesco.calc.impl.CalculatorServiceSimpleImpl">
       	<property name="calc" ref="calc" />
       </bean>
     </jaxrs:serviceBeans>
-    <jaxrs:providers>
-        <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
-    </jaxrs:providers>
     </jaxrs:server>
 
 </beans>

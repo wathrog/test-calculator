@@ -9,7 +9,6 @@
     <description>Simple CXF JAX-RS webapp service using spring configuration</description>
     <properties>
 	<parboiled.version>1.0.2</parboiled.version>
-        <jackson.version>1.8.6</jackson.version>
 	<guava.version>11.0.1</guava.version>
     </properties>
     <dependencies>
@@ -17,21 +16,6 @@
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-frontend-jaxrs</artifactId>
             <version>2.5.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-core-asl</artifactId>
-            <version>${jackson.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>${jackson.version}</version>
-        </dependency>
-         <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-jaxrs</artifactId>
-            <version>${jackson.version}</version>
         </dependency>
 	<dependency>
 		<groupId>org.parboiled</groupId>
