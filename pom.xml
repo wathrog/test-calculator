@@ -5,8 +5,8 @@
     <artifactId>calculator</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>Simple CXF JAX-RS webapp service using spring configuration</name>
-    <description>Simple CXF JAX-RS webapp service using spring configuration</description>
+    <name>Simple CXF JAX-RS webapp calculator service</name>
+    <description>Calculator service implementing all 4 basic operators</description>
     <properties>
 	<parboiled.version>1.0.2</parboiled.version>
 	<guava.version>11.0.1</guava.version>
