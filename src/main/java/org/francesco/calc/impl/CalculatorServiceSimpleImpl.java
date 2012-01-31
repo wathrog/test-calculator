@@ -31,7 +31,11 @@ public class CalculatorServiceSimpleImpl implements CalculatorService {
     @Produces("text/plain")
 	public Response calculate(@QueryParam("formula") String formula) {
 		checkNotNull(calc, "Calculator implementation has not been injected");
-		checkNotNull(formula, "Formula is not passed correctly");
+		try {
+			checkNotNull(formula, "Formula is not passed correctly");
+		} catch (NullPointerException e) {
+			return Response.status(400).entity("Can not parse an empty formula").build();
+		}
 		Response r;
 		try {
 			Integer res = calc.calculate(formula);
@@ -41,7 +45,4 @@ public class CalculatorServiceSimpleImpl implements CalculatorService {
 		}
 		return r;
 	}
-
-	
-
 }
